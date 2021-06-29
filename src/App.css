@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(85, 83, 83);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container .email-signature{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    background: #7d7c7c;;
+    border-radius: .5rem;
+    box-shadow: 0 2px 30px #000;
+    padding: 1rem 6rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container .email-signature .image{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container .email-signature .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 5px #ccc;
+    position: relative;
 }
+ ul{
+     list-style: none;
+ }
+ .container .email-signature .content{
+     padding-left: 8rem;
+ }
+ .container .email-signature .content .name{
+     text-align: center;
+     margin-top: 20px;
+     margin-bottom: 2rem;
+     padding-left: 30px;
+     color: #bababa;
+ }
+ .container .email-signature .content .post{
+     font-size: 2rem;
+     padding:2rem ;
+     margin: 1rem ;
+     background: #ccc;
+     border-radius: 3rem; 
+     color: #333;
+     text-align: center;
+     box-shadow: 0px 1px 20px black;
+ }
+ .container .email-signature .content .contact{
+     margin-top: -5px;
+     font-size: 1.5rem;
+     padding:10px
+ }
+ .container .email-signature .content .contact li{
+     list-style: none;
+     margin: 10px 0;
+     color:#ccc;
+     font-weight: 600;
+     letter-spacing: .8px;
+ }
+ .container .email-signature .content .contact li i{
+     height: 35px;
+     width: 35px;
+     line-height: 35px;
+     border-radius: 50%;
+     text-align: center;
+     background: #2c3e50;
+     margin-right: 10px;
+ }
+ .container .email-signature .content .icons{
+     display: flex;
+     padding:10px;
+     padding-left: 20px;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ }
+ .container .email-signature .content .icons li{
+     color: white;
+     margin-right: 20px;
+     font-size: 30px;
+     transition: all .4s;
+ }
+ .container .email-signature .content .icons li:hover{
+     color: rgb(82, 66, 66);
+ }
+ @media (max-width:768px){
+     .container .email-signature{
+         flex-flow: column;
+         width: 90%;
+         padding: 3rem;
+     }
+     .container .email-signature .content .name{
+         padding-top: 10px;
+     }
+     .container .email-signature .content {
+         padding-left: 0px;
+     }
+     .container .email-signature .content .name{
+         padding-left: 0px;
+     }
+ }
